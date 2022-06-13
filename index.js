@@ -10,9 +10,9 @@ app.get('/',(req,res)=>{
     res.end("working")
 })
 
-app.listen(8080,async(err,data)=>{
 
-   
+const PORT=process.env.PORT ||8080
+app.listen(PORT,async(err,data)=>{
     await connect
     console.log("connected");
     
